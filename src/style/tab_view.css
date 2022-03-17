@@ -1,0 +1,9 @@
+.tab-view {
+  overflow-y: scroll;
+  height: 600px;
+  width: 100%;
+}
+
+.tab-view-comp {
+  overflow-y: scroll;
+}

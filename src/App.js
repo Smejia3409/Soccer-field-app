@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+//components
+
+import Results from "./components/Results";
+import { UserContext } from "./components/UserContext";
+import { cities } from "./cities";
+
+//react router
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//css
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [myCity, setMyCity] = useState(cities[0]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <UserContext.Provider value={{ myCity, setMyCity }}>
+          <Route exact path="/">
+            <Results />
+          </Route>
+        </UserContext.Provider>
+      </Switch>
+    </Router>
   );
 }
 

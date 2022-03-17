@@ -1,0 +1,14 @@
+.map-view {
+  height: 80vh;
+  width: 100%;
+}
+
+.marker-popup {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 30px;
+  width: 150px;
+  background-color: white;
+  border-radius: 8px;
+}

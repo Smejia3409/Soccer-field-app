@@ -1,0 +1,20 @@
+.main-page {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/main-image.jpeg");
+  z-index: 0.5;
+}
+
+.search-comp {
+  opacity: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  top: 50%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  opacity: 2;
+  z-index: 1;
+  width: 30%;
+}
